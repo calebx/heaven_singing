@@ -1,0 +1,36 @@
+.logo
+  = image_tag 'logo.jpg'
+
+%h1
+  2016 天堂儿歌
+  %br
+  桐庐赛区 抽签结果
+
+%p
+  您的报名信息：
+%h2
+  = @kid.name
+  = @kid.phone
+  %br
+  = @kid.school
+  = @kid.grade
+  %br
+  = @kid.song
+
+%p
+  您的抽签结果是：
+%h2
+  = @kid.group
+  \#
+  = @kid.draw
+  号
+
+%p.text-muted
+  请牢记您的抽签结果：
+  %br
+  可以用【屏幕截图】功能保存到手机相册
+  %br
+  试试：同时按下电源键和Home按键
+
+%p.text-muted
+  如有问题，请联系：桐庐青少年宫

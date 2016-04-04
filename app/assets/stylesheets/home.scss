@@ -1,0 +1,30 @@
+body {
+  padding-top: 2rem;
+  background-color: #f9e9d9;
+
+  .logo {
+    float: left;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    color: #428bca;
+  }
+
+  p {
+    clear: both;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  form {
+    padding-top: 1rem;
+
+    .btn {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+*.swp~
+/log/*
+!/log/.keep
+/tmp
+.ruby-version, .ruby-gemset
+
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/spec/tmp
+
+/node_modules
+/app/assets/javascripts/bundle.js
+/public/medias
