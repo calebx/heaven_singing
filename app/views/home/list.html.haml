@@ -1,0 +1,29 @@
+.container
+  %h1
+    all kids status
+    %small= "amount: #{@count}"
+  %table.table
+    %thead
+      %tr
+        %th name
+        %th phone
+        %th school
+        %th grade
+        %th song
+        %th group
+        %th number
+    %tbody
+      - @kids.each do |kid|
+        %tr
+          %td= kid.name
+          %td= kid.phone
+          %td= kid.school
+          %td= kid.grade
+          %td= kid.song
+          %td= kid.group
+          %td
+            - if kid.drawed
+              %strong= kid.draw
+            - else
+              %small.text-muted ?
+
