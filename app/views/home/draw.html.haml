@@ -2,20 +2,22 @@
   = image_tag 'logo.jpg'
 
 %h1
-  2016 天堂儿歌
+  天堂儿歌 畅响未来
   %br
-  桐庐赛区 抽签结果
+  2016 桐庐赛区 抽签结果
 
 %p
   您的报名信息：
 %h2
-  = @kid.name
-  = @kid.phone
-  %br
-  = @kid.school
-  = @kid.grade
-  %br
+  《
   = @kid.song
+  》
+  %br
+  %small= @kid.name
+  %small= @kid.phone
+  %br
+  %small= @kid.school
+  %small= @kid.grade
 
 %p
   您的抽签结果是：

@@ -5,7 +5,7 @@ values = CSV.parse(File.read(file), headers: true).map do |row|
 end
 
 kids = values.map do |k|
-  Kid.create(name: k['name'], phone: k['phone'], school: k['school'], grade: k['grade'], song: k['song'], group: k['group'])
+  Kid.create(name: k['name'].strip, phone: k['phone'].strip, school: k['school'].strip, grade: k['grade'].strip, song: k['song'].strip, group: k['group'].strip)
 end
 
 grouped_kids = Kid.all.group_by(&:group)
