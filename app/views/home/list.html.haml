@@ -14,7 +14,8 @@
         %th number
     %tbody
       - @kids.each do |kid|
-        %tr
+        - tr_klass = kid.name.length > 4 ? 'danger' : ''
+        %tr{class: "#{tr_klass}"}
           %td= kid.name
           %td= kid.phone
           %td= kid.school
@@ -26,4 +27,3 @@
               %strong= kid.draw
             - else
               %small.text-muted ?
-
