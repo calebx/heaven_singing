@@ -1,0 +1,12 @@
+---
+environment: production
+port: 3030
+timeout: 30
+log: log/thin.log
+max_conns: 1024
+max_persistent_conns: 10
+require: []
+wait: 30
+servers: 3
+daemonize: true
+onebyone: true
