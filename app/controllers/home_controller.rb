@@ -14,7 +14,8 @@ class HomeController < ApplicationController
 
     if @name.blank? || @phone.blank?
       flash[:alert] = "请检查您的输入信息，系统未找到您的报名信息~ "
-      render :index
+      redirect_to root_path
+      return
     end
 
     @kid = Kid.seek(@name, @phone)
