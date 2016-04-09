@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     @phone = params[:draw][:phone].strip
 
     if @name.blank? || @phone.blank?
-      flash[:alert] = "请检查您的输入信息，系统未找到您的报名信息"
+      flash[:alert] = "请检查您的输入信息，系统未找到您的报名信息~ 如果您的报名时间超过了报名截止日期，系统也可能无法找到您报名信息；最终报名和抽签结果将在抽签结束后公布。"
       render :index
     end
 
