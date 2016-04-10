@@ -16,21 +16,25 @@ require 'csv'
 #   end
 # end
 
-file = 'db/after_kids.csv'
-values = CSV.parse(File.read(file), headers: true).map do |row|
-  row.to_hash
-end
+# file = 'db/after_kids.csv'
+# values = CSV.parse(File.read(file), headers: true).map do |row|
+#   row.to_hash
+# end
 
-kids = values.map do |k|
-  Kid.create(name: k['name'].strip, phone: k['phone'].strip, school: k['school'].strip, grade: k['grade'].strip, song: k['song'].strip, group: k['group'].strip)
-end
+# kids = values.map do |k|
+#   Kid.create(name: k['name'].strip, phone: k['phone'].strip, school: k['school'].strip, grade: k['grade'].strip, song: k['song'].strip, group: k['group'].strip)
+# end
 
-groups = Kid.all.map(&:group).uniq
-groups.each do |group|
-  max_draw = Kid.where(group: group).order(draw: :desc).first.draw
-  draw = max_draw
-  Kid.where(group: group).where(draw: nil).order(:id).each do |kid|
-    draw += 1
-    kid.update(draw: draw)
-  end
-end
+# groups = Kid.all.map(&:group).uniq
+# groups.each do |group|
+#   max_draw = Kid.where(group: group).order(draw: :desc).first.draw
+#   draw = max_draw
+#   Kid.where(group: group).where(draw: nil).order(:id).each do |kid|
+#     draw += 1
+#     kid.update(draw: draw)
+#   end
+# end
+
+k = Kid.where(phone: 18657197699).first
+k.name = "陈博涵 邓筱添"
+k.save

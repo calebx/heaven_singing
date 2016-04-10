@@ -14,7 +14,7 @@
         %th number
     %tbody
       - @kids.each do |kid|
-        - tr_klass = kid.name.length > 4 ? 'danger' : ''
+        - tr_klass = (kid.name.length > 4 || kid.phone.length != 11) ? 'danger' : ''
         %tr{class: "#{tr_klass}"}
           %td= kid.name
           %td= kid.phone
@@ -22,8 +22,4 @@
           %td= kid.grade
           %td= kid.song
           %td= kid.group
-          %td
-            - if kid.drawed
-              %strong= kid.draw
-            - else
-              %small.text-muted ?
+          %td= kid.draw

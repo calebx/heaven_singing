@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def list
-    @kids = Kid.order(:group).all
+    @kids = Kid.order(:group, :draw).all
     @count = @kids.count
   end
 
