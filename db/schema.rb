@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160402150153) do
+ActiveRecord::Schema.define(version: 20160503021507) do
 
   create_table "kids", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20160402150153) do
     t.boolean  "drawed",     default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "lots", force: :cascade do |t|
+    t.string   "group"
+    t.integer  "number"
+    t.integer  "kid_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
