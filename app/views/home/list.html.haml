@@ -6,20 +6,28 @@
     %thead
       %tr
         %th name
-        %th phone
         %th school
-        %th grade
-        %th song
+        %th who
+        %th phone
+        %th district
+        %th song_a
+        %th song_b
+        %th category
         %th group
-        %th number
+        %th half
+        %th lot
     %tbody
       - @kids.each do |kid|
         - tr_klass = (kid.name.length > 4 || kid.phone.length != 11) ? 'danger' : ''
         %tr{class: "#{tr_klass}"}
           %td= kid.name
-          %td= kid.phone
           %td= kid.school
-          %td= kid.grade
-          %td= kid.song
+          %td= kid.who
+          %td= kid.phone
+          %td= kid.district
+          %td= kid.song_a
+          %td= kid.song_b
+          %td= kid.category
           %td= kid.group
-          %td= kid.draw
+          %td= kid.half
+          %td= kid.lot ? kid.lot.number : '?'

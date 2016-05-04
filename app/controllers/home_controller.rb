@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def list
-    @kids = Kid.order(:group, :draw).all
+    @kids = Kid.includes(:lot).order(:group, "lots.number").all
     @count = @kids.count
   end
 
@@ -32,6 +32,5 @@ class HomeController < ApplicationController
   end
 
   def try
-
   end
 end

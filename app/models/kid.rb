@@ -1,16 +1,16 @@
 class Kid < ActiveRecord::Base
-  validates :name, :phone, :school, presence: true
-  validates :name, uniqueness: { scope: :phone, message: "same kids appears" }
+  validates :name, :phone, :school, :who, presence: true
+  validates :who, uniqueness: { scope: :phone, message: "same kids appears" }
   has_one :lot
 
   class << self
-    def seek(name, phone)
-      kid = self.where(name: name, phone: phone).first
-      if kid.present?
-        return kid
-      else
-        return self.where(phone: phone).find { |k| k.name.include? name }
-      end
+    def seek(who, phone)
+      kid = self.where(who: who, phone: phone).first
+      return kid if kid.present?
+      kid = self.where(phone: phone).find { |k| k.who.include? who }
+      return kid if kid.present?
+      kid = self.where(phone: phone).find { |k| k.school.include? who } if who.present? && who.length >= 4
+      return kid
     end
   end
 

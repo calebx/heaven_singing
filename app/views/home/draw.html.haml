@@ -9,23 +9,15 @@
 %p
   您的报名信息：
 %h2
-  《
-  = @kid.song
-  》
-  %br
   %small= @kid.name
   %small= @kid.phone
   %br
   %small= @kid.school
-  %small= @kid.grade
 
 %p
   您的抽签结果是：
 %h2
-  = @lot.group
-  \#
-  = @lot.number
-  号
+  = "#{@lot.group} #{@lot.half} # #{@lot.number} 号"
 %p
   该抽签结果的具体时间，地点，及选手信息将在抽签完全结束后，在[桐庐县青少年宫]微信公众号及网站上统一公布，请及时关注！
 %p.text-muted
