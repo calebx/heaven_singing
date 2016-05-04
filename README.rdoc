@@ -25,4 +25,24 @@ Things you may want to cover:
 
 
 Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt>rake doc:app</tt>
+
+* 电脑可以访问：http://draw.luedian.cn/
+* iOS手机可以访问：http://draw.luedian.cn/
+* 安卓手机可以访问：http://draw.luedian.cn/
+* 微信可以访问：http://draw.luedian.cn/
+
+* 正常报名：输入 姓名，手机，进行抽签，能显示正确抽签结果
+* 正常报名：输入 空白姓名或者 空白手机 进行抽签，【不能】显示正确抽签结果
+* 团体报名：输入 学校，手机，进行抽签，能显示正确抽签结果
+* 团体报名：输入 任意姓名，手机，进行抽签，【不能】显示正确抽签结果，提示无法找到
+* 多人报名：输入 任意姓名，手机，进行抽签，能显示正确抽签结果
+* 多人报名：输入 学校，手机，进行抽签，【不能】显示正确抽签结果，提示无法找到
+
+* 同一信息第二次输入抽签: 能显示抽签结果，提示已经抽签过了
+* 同一信息第二次输入抽签: 显示与第一次相同的抽签号码
+
+* 输入某特定需求同学，【不能】显示正确抽签结果，提示无法找到
+* 输入某特定3名学生，进行抽签，能显示正确抽签结果，移到正确的半场结果
+
+
