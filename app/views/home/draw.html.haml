@@ -1,10 +1,11 @@
 .logo
-  = image_tag 'logo.jpg'
+  = image_tag 'ttlogo.jpg', width: '100%'
+= bootstrap_flash
 
 %h1
-  天堂儿歌 畅响未来
+  2016 杭州市 第十一届 “天堂儿歌”
   %br
-  2016 桐庐赛区 抽签结果
+  抽签结果：
 
 %p
   您的报名信息：
@@ -13,13 +14,18 @@
   %small= @kid.phone
   %br
   %small= @kid.school
-
 %p
   您的抽签结果是：
 %h2
-  = "#{@lot.group} #{@lot.half} # #{@lot.number} 号"
-%p
-  该抽签结果的具体时间，地点，及选手信息将在抽签完全结束后，在[桐庐县青少年宫]微信公众号及网站上统一公布，请及时关注！
+  = "#{@lot.group} #{@lot.half} "
+  %span#lot-number{data: {number: @lot.number, drawed: @drawed}}>
+    - if @drawed
+      = @lot.number
+    - else
+      ?
+  号
+%p.text-danger
+  特别提醒：该抽签结果将在5月6日在杭州青少年活动中心官网 “天堂儿歌”专区公示，并仔细阅读该网站上的“杭州市第十一届‘天堂儿歌’演唱和创作大赛复赛通告”，实时掌握大赛信息！
 %p.text-muted
   请牢记您的抽签结果：
   %br

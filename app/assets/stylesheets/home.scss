@@ -1,10 +1,9 @@
 body {
-  padding-top: 2rem;
-  background-color: #f9e9d9;
+  background-color: #f9f9f3;
 
   .logo {
-    float: left;
-    margin-right: 1rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -22,9 +21,21 @@ body {
 
   form {
     padding-top: 1rem;
-
+    padding-bottom: 2rem;
     .btn {
       margin-top: 3rem;
     }
+  }
+
+  #lot-number {
+    color: #FAFAFA;
+    font-weight: 600;
+    font-size: 32px;
+    padding: 0 20px;
+    margin: 0 10px;
+    line-height: 36px;
+    background-color: #428bca;
+    border: 1px solid #357ebd;
+    border-radius: 2px;
   }
 }

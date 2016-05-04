@@ -23,6 +23,7 @@ class HomeController < ApplicationController
     @kid = Kid.seek(@name, @phone)
     if @kid.present?
       flash[:notice] = @kid.lot ? "您已经抽过签了~" : "抽签完成~"
+      @drawed = @kid.lot ? 1 : 0
       @lot = @kid.draw_a_lot
       render :draw
     else

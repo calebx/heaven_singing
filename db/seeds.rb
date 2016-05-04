@@ -14,7 +14,6 @@ kids = values.map do |k|
   Kid.create(
     name: name,
     school: school,
-    who: k['who'].strip.gsub(/\s/, ''),
     phone: k['phone'].strip.gsub(/\s/, ''),
     district: k['district'].strip.gsub(/\s/, ''),
     song_a: k['song_a'].strip.gsub(/\s/, ''),
