@@ -1,5 +1,5 @@
 class Kid < ActiveRecord::Base
-  validates :name, :phone, :school, :who, presence: true
+  validates :name, :phone, presence: true
   validates :name, uniqueness: { scope: :phone, message: "same kids appears" }
   has_one :lot
 
