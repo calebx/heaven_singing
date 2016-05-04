@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def list
-    @kids = Kid.includes(:lot).order(:group, "lots.number").all
+    @kids = Kid.includes(:lot).order(:id).all
     @count = @kids.count
   end
 
