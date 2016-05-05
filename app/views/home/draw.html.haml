@@ -15,9 +15,9 @@
   您的抽签结果是：
 %h2
   = "#{@lot.group} #{@lot.half} "
-  %span#lot-number{data: {number: @lot.number, drawed: @drawed}}>
+  %span#lot-number{data: { number: @lot.display_num, drawed: @drawed }}>
     - if @drawed
-      = @lot.number
+      = @lot.display_num
     - else
       ?
   号
