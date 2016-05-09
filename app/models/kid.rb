@@ -18,7 +18,7 @@ class Kid < ActiveRecord::Base
     else
       lot = nil
       Lot.transaction do
-        lot = Lot.lock.where(group: self.group, half: self.half).where(kid_id: nil).order("RANDOM()").first
+        lot = Lot.lock.where(group: self.group).where(kid_id: nil).order("RANDOM()").first
         lot.update(kid_id: self.id) if lot
       end
       return lot
