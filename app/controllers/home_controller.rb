@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  http_basic_authenticate_with name: "luedian", password: "monday"
+  http_basic_authenticate_with name: "luedian", password: "monday", only: [:list]
 
   def index
   end
