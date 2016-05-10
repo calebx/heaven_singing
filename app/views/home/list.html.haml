@@ -13,7 +13,6 @@
         %th district
         %th song_a
         %th song_b
-        %th category
     %tbody
       - @kids.each do |kid|
         - tr_klass = (kid.name.length > 4 || kid.phone.length != 11) ? 'danger' : ''
@@ -26,4 +25,3 @@
           %td= kid.district
           %td= kid.song_a
           %td= kid.song_b
-          %td= kid.category
