@@ -5,25 +5,25 @@
   %table.table
     %thead
       %tr
+        %th group
         %th name
+        %th lot
         %th school
         %th phone
         %th district
         %th song_a
         %th song_b
         %th category
-        %th group
-        %th lot
     %tbody
       - @kids.each do |kid|
         - tr_klass = (kid.name.length > 4 || kid.phone.length != 11) ? 'danger' : ''
         %tr{class: "#{tr_klass}"}
+          %td= kid.group
           %td= kid.name
+          %td= kid.lot ? kid.lot.number : '?'
           %td= kid.school
           %td= kid.phone
           %td= kid.district
           %td= kid.song_a
           %td= kid.song_b
           %td= kid.category
-          %td= kid.group
-          %td= kid.lot ? kid.lot.number : '?'
