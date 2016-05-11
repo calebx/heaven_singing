@@ -14,7 +14,7 @@
 %p
   您的抽签结果是：
 %h2
-  = "#{@lot.group} #{@lot.half} "
+  = "#{@lot.group}"
   %span#lot-number{data: { number: @lot.number, drawed: @drawed }}>
     - if @drawed
       = @lot.number
