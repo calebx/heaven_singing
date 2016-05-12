@@ -3,15 +3,18 @@
 = bootstrap_flash
 
 %h1
-  半决赛抽签
-%p
-  请按半决赛选手呈报表信息填写
-  %br
-  点击表单下方的 [抽签] 按钮完成抽签
-  %br
-  %small.text-muted ( 四人以上集体节目：姓名处填写学校名称，电话处填写教师电话 )
+  请等待
 
-= simple_form_for :draw, url: draw_path, html: { method: :post } do |f|
-  = f.input :name, label: "姓名 或者 学校名", placeholder: "报名表中提交的 姓名 或者 学校名", input_html: { class: "input-lg", value: @name }
-  = f.input :phone, label: "手机", placeholder: "报名表中提交的联系电话", input_html: { class: "input-lg", value: @phone }
-  = f.button :submit, "抽签", class: 'btn-primary btn-lg btn-block'
+/ %h1
+/   半决赛抽签
+/ %p
+/   请按半决赛选手呈报表信息填写
+/   %br
+/   点击表单下方的 [抽签] 按钮完成抽签
+/   %br
+/   %small.text-muted ( 四人以上集体节目：姓名处填写学校名称，电话处填写教师电话 )
+
+/ = simple_form_for :draw, url: draw_path, html: { method: :post } do |f|
+/   = f.input :name, label: "姓名 或者 学校名", placeholder: "报名表中提交的 姓名 或者 学校名", input_html: { class: "input-lg", value: @name }
+/   = f.input :phone, label: "手机", placeholder: "报名表中提交的联系电话", input_html: { class: "input-lg", value: @phone }
+/   = f.button :submit, "抽签", class: 'btn-primary btn-lg btn-block'
