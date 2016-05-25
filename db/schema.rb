@@ -16,21 +16,18 @@ ActiveRecord::Schema.define(version: 20160503021507) do
   create_table "kids", force: :cascade do |t|
     t.string   "name"
     t.string   "school"
-    t.string   "who"
     t.string   "phone"
     t.string   "district"
     t.string   "song_a"
     t.string   "song_b"
     t.string   "category"
     t.string   "group"
-    t.string   "half"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "lots", force: :cascade do |t|
     t.string   "group"
-    t.string   "half"
     t.integer  "number"
     t.integer  "kid_id"
     t.datetime "created_at", null: false
